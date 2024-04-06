@@ -1,0 +1,276 @@
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the video is behind other content */
+  }
+  
+  .video-background video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust opacity (last value) as needed */
+  }
+
+  /* HTML CONTENT */
+
+  .main{
+    padding: 2rem;
+    color: white;
+  }
+  
+  .navBar{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .leftSide{
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+  }
+
+  .leftSide img{
+    width: 90px;
+    height: 70px;
+    border-radius: 50%;
+  }
+
+  .leftSide p{
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .rightSide{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .rightSide p{
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
+  .rightSide p:hover{
+    border-bottom: 1px solid snow;
+  }
+
+  .bottom p{
+    /* border: 1px solid white; */
+    width: 55rem;
+    font-weight: 600;
+    font-size: 4rem;
+    position: relative;
+    top: 15rem;
+    left: 2rem;
+  }
+
+  .slogan{
+    font-weight: 400 !important;
+    font-size: 1.5rem !important;
+  }
+
+  .footerBtn p{
+    border: 1px solid white;
+    padding: 8px;
+    width: fit-content;
+  }
+
+  .btmSection{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+  }
+
+  .footerBtn p{
+    position: relative;
+    top: 22rem;
+    left: 15rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .footerBtn p:hover{
+    color: black;
+    background-color: snow;
+  }
+
+  /* media query */
+  @media (max-width: 1246px){
+    .footerBtn p{
+      position: relative;
+      top: 22rem;
+      left: 10rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+  }
+
+  @media (max-width: 1160px){
+    .footerBtn p{
+      position: relative;
+      top: 22rem;
+      left: 5rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+  }
+
+  @media (max-width: 1090px){
+    .footerBtn p{
+      position: relative;
+      top: 22rem;
+      left: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+  }
+
+  @media (max-width: 1050px){
+    .footerBtn{
+      display: none;
+    }
+  }
+
+  @media (max-width: 650px){
+    .bottom p{
+      width: 35rem;
+      font-weight: 600;
+      font-size: 3rem;
+      position: relative;
+      top: 15rem;
+      left: 1rem;
+    }
+  }
+
+  @media (max-width: 485px){
+    .bottom p{
+      width: 35rem;
+      font-weight: 600;
+      font-size: 2.5rem;
+      position: relative;
+      top: 15rem;
+      left: 1rem;
+    }
+
+    .footerBtn p{
+      display: none;
+    }
+  }
+
+  @media (max-width: 485px){
+    .bottom p{
+      width: 35rem;
+      font-weight: 600;
+      font-size: 2.2rem;
+      position: relative;
+      top: 20rem;
+      left: 1rem;
+    }
+  }
+
+  @media (max-width: 485px){
+    .bottom p{
+      width: 35rem;
+      font-weight: 600;
+      font-size: 2rem;
+      position: relative;
+      top: 20rem;
+      left: 0rem;
+    }
+  }
+
+  @media (max-width: 390px){
+    .bottom p{
+      width: 35rem;
+      font-weight: 600;
+      font-size: 2.2rem;
+      position: relative;
+      top: 20rem;
+      left: 0rem;
+    }
+
+    .slogan{
+      display: none;
+    }
+  }
+
+  @media (max-width: 350px){
+    .bottom p{
+      width: 35rem;
+      font-weight: 600;
+      font-size: 2rem;
+      position: relative;
+      top: 20rem;
+      left: 0rem;
+    }
+  }
+
+  @media (max-width: 350px){
+    .bottom p{
+      width: 35rem;
+      font-weight: 600;
+      font-size: 2rem;
+      position: relative;
+      top: 20rem;
+      left: 0rem;
+    }
+
+    .navBar{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      left: -1rem;
+    }
+  }
+
+  @media (max-width: 320px){
+    .bottom p{
+      width: 35rem;
+      font-weight: 600;
+      font-size: 2rem;
+      position: relative;
+      top: 20rem;
+      left: -1rem;
+    }
+
+    .navBar{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      left: -1rem;
+    }
+  }
+
+  @media (max-width: 305px){
+    .bottom p{
+      width: 35rem;
+      font-weight: 600;
+      font-size: 1.7rem;
+      position: relative;
+      top: 20rem;
+      left: -1rem;
+    }
+
+    .navBar{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      left: -1rem;
+    }
+  }

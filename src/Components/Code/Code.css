@@ -1,0 +1,188 @@
+.codeDiv{
+    background: #1d2026;
+	min-height: 100vh;
+	width: 100%;
+	color: #fff;
+}
+
+.codeSection{
+    padding-top: 1.5rem;
+}
+
+.allContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 1.5rem;
+}
+
+.code_line{
+    font-size: 20px;
+    color: white;
+    margin-left: 1.3rem;
+    font-weight: 600;
+}
+
+.left, .right{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px 3px #2f343d;
+    background-color: #252830;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    color: #69c8ed;
+    margin-bottom: 3rem;
+}
+
+.left{
+    height: 28rem;
+}
+
+.left h2, .right h2{
+    background-color: #2f303a;
+    box-shadow: 0px 0px 5px 3px #454c59;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.dropdownNcustomTag{
+    display: flex;
+    gap: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.dropdownNcustomTag option{
+    font-size: 16px;
+}
+
+.copyBtn{
+    background-color: #1e1e20;
+    box-shadow: 0px 0px 3px 1px #454c59;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    color: #fefefe;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.copyBtn:hover{
+    box-shadow: 3px 3px 1px 2px #454c59;
+}
+
+.left select{
+    width: 10rem;
+    margin-top: 20px;
+}
+
+.selectLauange{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.dropDownForLang{
+    outline: none;
+    border: none;
+    padding: 0.5rem 1.3rem;
+    border-radius: 1rem;
+}
+
+.dropDownForLang option{
+    color: #0d5876;
+}
+
+.customTag{
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+    height: 50%;
+    font-size: 15px;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.textareaCode{
+    width: 30rem;
+    height: 8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    resize: none;
+    border: 0;
+    outline: 0;
+    background: white;
+    border-radius: 20px;
+    padding:1rem;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #343434;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.codeText{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.copyBtn{
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+}
+
+.yourCode{
+    margin-top: 1rem;
+    width: 35rem;
+    height: 30rem;
+    background-color: #1d2026;
+    box-shadow: 0px 0px 8px 4px #2f343e;
+    border-radius: 1rem;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+@media (max-width: 670px){
+    .right{
+        width: 85%;
+    }
+    .yourCode{
+        width: 100%;
+    }
+}
+
+@media (max-width: 570px){
+    .left{
+        width: 85%;
+    }
+    .textareaCode{
+        width: 100%;
+    }
+}
+
+@media (max-width: 490px){
+    .dropdownNcustomTag{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 440px){
+    .aiHeading h1{
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 340px){
+    .left{
+        height: 33rem;
+    }
+}

@@ -1,0 +1,200 @@
+.Summary{
+    background: #1d2026;
+      min-height: 100vh;
+      width: 100%;
+      color: #fff;
+  }
+  
+  .inputSummary{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .aiHeading{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .aiHeading h1{
+      font-size: 60px;
+      font-weight: 600;
+      color: #2C87AA;
+      border-bottom: 3px solid #2C87AA;
+      margin-bottom: 1rem;
+  }
+  
+  .aiHeading p{
+      font-size: 18px;
+      width: 55%;
+      text-align: center;
+  }
+  
+  .textarea {
+      width: 75%;
+      height: 16rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 16px;
+      font-family: 'Montserrat', sans-serif;
+      resize: none;
+      border: 0;
+      outline: 0;
+      background: white;
+      border-radius: 20px;
+      padding:20px;
+      font-weight: bold;
+      font-size: 1.4em;
+      color: #343434;
+      box-shadow: inset 0px 0px 5px 2px #1d2026;
+  }
+  
+  .Summary button{
+      margin-bottom: 0.5rem;
+      margin-top: 0.9rem;
+  }
+  
+  .aiBtn {
+      display: block;
+      border-radius: 5px;
+      background: #2C87AA;
+      background: linear-gradient(0deg,#47aed7 0%, #2C87AA 100%);
+      color: white;
+      font-weight: 600;
+      width: 130px;
+      height: 40px;
+      line-height: 42px;
+      font-size: 16px;
+      padding: 0;
+      border: none;
+      transition: all 0.4s ease;
+      font-family: 'Montserrat', sans-serif;
+      cursor: pointer;
+    }
+  
+    .aiBtn:hover{
+      box-shadow: 2px 2px 4px 2px white;
+      transform: translateY(-2px);
+    }
+    
+  
+  .content{
+      text-align: center;
+      width: 70%;
+      padding: 10px;
+      font-size: 20px;
+      margin-top: 1.3rem;
+      margin-bottom: 4rem;
+  }
+  
+  /* loader */
+  .spinner {
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      margin-left: 35%;
+    }
+    
+    .spinner div {
+      position: absolute;
+      width: 50%;
+      height: 150%;
+      background: #2C87AA;
+      transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+      animation: spinner-fzua35 1s calc(var(--delay) * 1s) infinite ease;
+    }
+    
+    .spinner div:nth-child(1) {
+      --delay: 0.1;
+      --rotation: 36;
+      --translation: 150;
+    }
+    
+    .spinner div:nth-child(2) {
+      --delay: 0.2;
+      --rotation: 72;
+      --translation: 150;
+    }
+    
+    .spinner div:nth-child(3) {
+      --delay: 0.3;
+      --rotation: 108;
+      --translation: 150;
+    }
+    
+    .spinner div:nth-child(4) {
+      --delay: 0.4;
+      --rotation: 144;
+      --translation: 150;
+    }
+    
+    .spinner div:nth-child(5) {
+      --delay: 0.5;
+      --rotation: 180;
+      --translation: 150;
+    }
+    
+    .spinner div:nth-child(6) {
+      --delay: 0.6;
+      --rotation: 216;
+      --translation: 150;
+    }
+    
+    .spinner div:nth-child(7) {
+      --delay: 0.7;
+      --rotation: 252;
+      --translation: 150;
+    }
+    
+    .spinner div:nth-child(8) {
+      --delay: 0.8;
+      --rotation: 288;
+      --translation: 150;
+    }
+    
+    .spinner div:nth-child(9) {
+      --delay: 0.9;
+      --rotation: 324;
+      --translation: 150;
+    }
+    
+    .spinner div:nth-child(10) {
+      --delay: 1;
+      --rotation: 360;
+      --translation: 150;
+    }
+    
+    @keyframes spinner-fzua35 {
+      0%, 10%, 20%, 30%, 50%, 60%, 70%, 80%, 90%, 100% {
+        transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+      }
+    
+      50% {
+        transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1.5%));
+      }
+    }
+  
+    @media (max-width: 520px){
+      .aiHeading p{
+        display: none;
+      }
+    }
+  
+    @media (max-width: 375px){
+      .aiHeading h1{
+        font-size: 3rem;
+      }
+      .textarea {
+        font-size: 14px;
+    }
+    
+    }
+  
+    @media (max-width: 320px){
+      .aiHeading h1{
+        font-size: 2.5rem;
+      }
+    }

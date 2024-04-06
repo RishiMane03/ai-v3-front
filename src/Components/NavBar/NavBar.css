@@ -1,0 +1,92 @@
+.NavBar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1.3rem 18rem;
+  background-color: #1d2026;
+}
+
+.logoNtitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.logoNtitle img{
+  margin-bottom: 1rem;
+}
+
+.linksToNavigate{
+    display: flex;
+    gap: 2.5rem;
+}
+
+.linksToNavigate a{
+    text-decoration: none;
+    color: white;
+    background: #1d2026;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 5px;
+	  position: relative;
+    transition: all 1s ease;
+}
+
+.linksToNavigate a:hover{
+  color: #66c1e6;
+}
+
+.linksToNavigate .active {
+  color: #66c1e6;
+  scale: 1.4;
+  font-weight: 800;
+}
+
+.linksToNavigate a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0%;
+	height: 1px;
+	background-color: #66c1e6;
+	transition: width 0.4s ease; /* Smooth transition for width */
+  }
+  
+  .linksToNavigate a:hover::after {
+	  width: 100%; /* Expand the width to create an animated border-bottom */
+  }
+
+  .muiDrawer{
+    display: none;
+  }
+
+  /* media Query */
+
+  @media (max-width: 1120px) {
+    .NavBar{
+      gap: 5rem;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .NavBar{
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .linksToNavigate{
+      display: none;
+    }
+    .muiDrawer{
+      display: block;
+    }
+    .NavBar{
+      padding: 1.3rem 2rem;
+    }
+  }
