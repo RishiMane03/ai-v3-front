@@ -261,6 +261,10 @@
 	opacity: 1;
 }
 
+.lampNtext{
+	padding: 2rem;
+}
+
  /* media query */
  @media (max-width: 1000px){
     .dashboardNavBar{

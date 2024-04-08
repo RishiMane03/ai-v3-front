@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 
 function HomePage() {
@@ -79,7 +80,7 @@ function HomePage() {
             <NavLink to='/pdfHub'>PDF</NavLink>
             <NavLink to='/imageHub'>Image</NavLink>
             <div className='logoutBtn' onClick={logoutFun}>
-              <i class="fa-solid fa-right-from-bracket fa-2xl"></i>
+              <LogoutIcon style={{color: 'white', fontSize: '2rem', cursor: 'pointer'}}/>
             </div>
           </ul>
 

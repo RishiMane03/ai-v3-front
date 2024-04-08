@@ -109,7 +109,7 @@ function NavBar() {
             <NavLink to='/pdfHub'>PDF</NavLink>
             <NavLink to='/imageHub'>Image</NavLink>
             <div className='logoutBtn' onClick={logoutFun}>
-              <i class="fa-solid fa-right-from-bracket fa-2xl"></i>
+              <LogoutIcon style={{color: 'white', fontSize: '2rem', cursor: 'pointer'}}/>
             </div>
           </ul>
 
