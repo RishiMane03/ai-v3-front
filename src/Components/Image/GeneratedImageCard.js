@@ -28,7 +28,7 @@ const Image = styled.img`
 
 const GeneratedImageCard = ({ src, loading }) => {
   return (
-    <Container>
+    <Container className="imgRightCard">
       {loading ? (
         <>
           <CircularProgress

@@ -148,7 +148,7 @@
     position: sticky;
     top: 30rem;
     left: 5rem;
-    width: 80%;
+    width: 70%;
 }
 
 .messagebar{
@@ -254,7 +254,7 @@
 
 @media (max-width: 690px) {
     .bottomsection .messagebar input {
-        width: 70%;
+        width: 65%;
     }
 }
 

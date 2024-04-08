@@ -214,7 +214,10 @@ const Chat = () => {
               toast.success('Memories created!')
             }
             console.log('Error saving chat to Database:', error);
-            // toast.error('There is an error creating memories!')
+            if(error.response.data.sessionExpired){
+              navigate('/login')
+              return  toast.error("Session Exipred Please Login")
+            }
         }
     }
 

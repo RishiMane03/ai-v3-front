@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 // Components:
 import LandingPage from './Components/LandingPage/LandingPage';
+import SignUpIn from './Components/SignUpIn/SignIn';
 import HomePage from './Components/HomePage/homePage';
 import Summary from './Components/Summary/Summary';
 import Code from './Components/Code/Code';
@@ -20,6 +21,7 @@ function App() {
         <Router>
           <Routes>
             <Route path='/' element={<LandingPage/>}/>
+            <Route path='/login' element={<SignUpIn/>}/>
             <Route path='/dashboard' element={<HomePage/>}/>
             <Route path='/summaryHub' element={<Summary/>}/>
             <Route path='/codeHub' element={<Code/>}/>

@@ -99,8 +99,12 @@
 .doubtInput{
     margin-top: 1rem;
     position: fixed;
-    top: 18rem;
-    width: 95%; 
+    top: 21rem;
+    width: 90%; 
+}
+
+.doubtInput input{
+    font-size: 20px;
 }
 
 .qusnAns{

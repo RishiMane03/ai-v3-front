@@ -75,7 +75,7 @@
     font-weight: 600;
     font-size: 4rem;
     position: relative;
-    top: 15rem;
+    top: 18rem;
     left: 2rem;
   }
 
@@ -93,7 +93,6 @@
   .btmSection{
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
     flex-wrap: wrap;
   }
 

@@ -114,6 +114,10 @@ function Pdf() {
               toast.success('Here we go!')
             } catch (error) {
               console.error('Error:', error);
+              if(error.response.data.sessionExpired){
+                navigate('/login')
+                return  toast.error("Session Exipred Please Login")
+              }
           }
       }
   }
@@ -130,6 +134,10 @@ function Pdf() {
               toast.success('Lets train your brain together!')
             } catch (error) {
               console.error('Error:', error);
+              if(error.response.data.sessionExpired){
+                navigate('/login')
+                return  toast.error("Session Exipred Please Login")
+              }
           }
       }
   }
@@ -194,6 +202,10 @@ function Pdf() {
           toast.success(`Your wish is my command`)
         } catch (error) {
           console.error('Error:', error);
+          if(error.response.data.sessionExpired){
+            navigate('/login')
+            return  toast.error("Session Exipred Please Login")
+          }
         }
       }else{
         toast.error('Enter Question')
@@ -319,7 +331,7 @@ function Pdf() {
                                      isEnterPress && (
                                       <div>
                                         <h3>{<b>Question :</b>} {questionValue || 'Please enter a question'}</h3>
-                                        <h5>
+                                        <h4>
                                           {<b>Answer :</b>}{' '}
                                           {answer ? (
                                             answer.split('\n').map((line, index) => (
@@ -336,7 +348,7 @@ function Pdf() {
                                                 style={{ marginLeft: '0.5rem', marginTop: '1rem', }} 
                                               />
                                           )}
-                                        </h5>
+                                        </h4>
                                       </div>
                                     )
                                   }

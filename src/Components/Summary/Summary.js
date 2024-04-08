@@ -42,13 +42,12 @@ function Summary() {
       setLoaderDisplay(true)
       const response = await axios.post(`https://ai-v3-back.onrender.com/summarize`, { paragraph });
       setSummary(response.data.summary);
-      console.log(response.data);
-      if(response.data.isTokenPresent === false){
-        toast.error(`Token expire, Please login!`)
-        navigate('/login')
-      }
     } catch (error) {
       console.error('Error or NoToken:', error);
+      if(error.response.data.sessionExpired){
+        navigate('/login')
+        return  toast.error("Session Exipred Please Login")
+      }
     }
   };
 //   console.log(summary);

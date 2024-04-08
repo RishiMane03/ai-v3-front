@@ -48,12 +48,12 @@ function Code() {
             setLoaderDisplay(true)
             const response = await axios.post(`https://ai-v3-back.onrender.com/getCode`, { inputedCode,language });
             setyourCode(response.data.codeSolution);
-            if(response.data.isTokenPresent === false){
-              toast.error(`Token expire , Please Login`)
-              navigate('/login')
-            }
           } catch (error) {
             console.error('Error:', error);
+            if(error.response.data.sessionExpired){
+              navigate('/login')
+              return  toast.error("Session Exipred Please Login")
+            }
           }
     }
 

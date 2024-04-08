@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import flowerLogo2 from '../../assets/flower-logo2.png'
 import './homePage.css'
 import axios from 'axios';
+import toast from 'react-hot-toast';
 // import VariableContext from '../../Content/VariableContext';
 
 // MUI
@@ -48,16 +49,17 @@ function HomePage() {
 
   const logoutFun = async () => {
     try {
-      const response = await axios.get(`https://ai-v3-back.onrender.com/logout`);
+      const response = await axios.post(`https://ai-v3-back.onrender.com/logout`);
       console.log(response.data);
-      if(response.data.logout){
+      if(response.data.logoutSucess){
         navigate('/login')
+        return toast.success("Logout Successfull")
       }
     } catch (error) {
-      console.error('Error or NoToken:', error);
-      if(!error.response.data.isTokenPresent){
-        alert('No token present')
-        // navigate('/login')
+      console.error('Error:', error);
+      if(error.response.data.sessionExpired){
+        navigate('/login')
+        return  toast.error("Session Exipred Please Login")
       }
     }
   }

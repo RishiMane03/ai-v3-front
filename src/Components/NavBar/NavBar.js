@@ -21,6 +21,7 @@ import ChatIcon from '@mui/icons-material/Chat';
 import PdfIcon from '@mui/icons-material/PictureAsPdf';
 import ImageIcon from '@mui/icons-material/Image';
 import LogoutIcon from '@mui/icons-material/Logout';
+import toast from 'react-hot-toast';
 
 
 function NavBar() {
@@ -81,12 +82,16 @@ function NavBar() {
   const logoutFun = async () => {
     try {
       const response = await axios.get(`https://ai-v3-back.onrender.com/logout`);
-      console.log(response.data);
-      if(response.data.logout){
+      if(response.data.logoutSucess){
         navigate('/login')
+        return toast.success("Logout Successfull")
       }
     } catch (error) {
       console.error('Error or NoToken:', error);
+      if(error.response.data.sessionExpired){
+        navigate('/login')
+        return  toast.error("Session Exipred Please Login")
+      }
     }
   }
 

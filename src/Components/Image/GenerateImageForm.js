@@ -94,6 +94,10 @@ import toast from 'react-hot-toast';
     } catch (error) {
         console.log(error);
         setGenerateImageLoading(false);
+        if(error.response.data.sessionExpired){
+          navigate('/login')
+          return  toast.error("Session Exipred Please Login")
+        }
     }
   };
 
