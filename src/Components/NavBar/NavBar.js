@@ -81,13 +81,14 @@ function NavBar() {
 
   const logoutFun = async () => {
     try {
-      const response = await axios.get(`https://ai-v3-back.onrender.com/logout`);
+      const response = await axios.post(`https://ai-v3-back.onrender.com/logout`);
+      console.log(response.data);
       if(response.data.logoutSucess){
         navigate('/login')
         return toast.success("Logout Successfull")
       }
     } catch (error) {
-      console.error('Error or NoToken:', error);
+      console.error('Error:', error);
       if(error.response.data.sessionExpired){
         navigate('/login')
         return  toast.error("Session Exipred Please Login")
