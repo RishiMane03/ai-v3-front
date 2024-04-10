@@ -176,21 +176,16 @@
     .bottom p{
       width: 35rem;
       font-weight: 600;
-      font-size: 2.2rem;
-      position: relative;
-      top: 20rem;
-      left: 1rem;
-    }
-  }
-
-  @media (max-width: 485px){
-    .bottom p{
-      width: 35rem;
-      font-weight: 600;
       font-size: 2rem;
       position: relative;
       top: 20rem;
       left: 0rem;
+    }
+  }
+
+  @media (max-width: 485px){
+    .slogan{
+      display: none;
     }
   }
 
@@ -202,10 +197,6 @@
       position: relative;
       top: 20rem;
       left: 0rem;
-    }
-
-    .slogan{
-      display: none;
     }
   }
 

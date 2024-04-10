@@ -1,6 +1,7 @@
 .imgForm{
     margin-top: -7rem;
 }
+
 .imgRightCard{
     margin-top: -7rem;
 }
@@ -8,5 +9,8 @@
 @media (max-width: 765px) {
     .imgForm{
         margin-top: 15rem;
+    }
+    .imgRightCard{
+        margin-top: 0rem;
     }
 }

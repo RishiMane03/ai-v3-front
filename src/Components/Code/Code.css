@@ -154,7 +154,7 @@
         width: 85%;
     }
     .yourCode{
-        width: 100%;
+        width: 90%;
     }
 }
 
@@ -163,7 +163,7 @@
         width: 85%;
     }
     .textareaCode{
-        width: 100%;
+        width: 90%;
     }
 }
 
@@ -173,12 +173,17 @@
         flex-direction: column;
         gap: 5px;
     }
+    .customTag{
+        width: 80%;
+    }
+    
 }
 
 @media (max-width: 440px){
     .aiHeading h1{
         margin-left: 1rem;
     }
+    
 }
 
 @media (max-width: 340px){

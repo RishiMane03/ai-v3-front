@@ -258,6 +258,12 @@
     }
 }
 
+@media (max-width: 450px){
+    .messagebar{
+        margin-right: 7rem;
+    }
+}
+
 @media (max-width: 400px) {
     .nochat .s1 h1 {
         font-size: 14px;
